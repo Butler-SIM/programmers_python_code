@@ -16,9 +16,9 @@
 # budget은 예산을 나타내며, 1 이상 10,000,000 이하의 자연수입니다.
 
 # 입출력 예
-# d	budget	result
-# [1,3,2,5,4]	9	3
-# [2,2,3,3]	10	4
+# d	          budget	result
+# [1,3,2,5,4]	9	     3
+# [2,2,3,3]	    10	     4
 # 입출력 예 설명
 # 입출력 예 #1
 # 각 부서에서 [1원, 3원, 2원, 5원, 4원]만큼의 금액을 신청했습니다. 만약에, 1원, 2원, 4원을 신청한 부서의 물품을
@@ -36,10 +36,21 @@
 # 모든 부서의 물품을 구매해주면 10원이 됩니다. 따라서 최대 4개 부서의 물품을 구매해 줄 수 있습니다.
 
 def solution(d, budget):
-    answer = 0
-    return answer
+    d.sort()
+    count = 0
+    sum=0
+
+    for i in range(len(d)):
+        if (sum + d[i]) <= budget:
+            sum += d[i]
+            count += 1
+        else:
+            break
+
+    print(count)
+    return count
 
 
 # Press the green button in the gutter to run the script.
 if __name__ == '__main__':
-    solution([1,3,2,5,4],9)
+    solution([1,3,2,5,4], 9)
