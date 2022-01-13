@@ -22,10 +22,12 @@ def solution(n):
     print(arr)
     answer = ""
 
-    for i in arr:
-        print("asdf")
+    for i in range(len(arr)):
+        print(arr[i])
+        answer += arr[i]
 
-    return answer
+    print(int(answer))
+    return int(answer)
 
 
 # Press the green button in the gutter to run the script.
