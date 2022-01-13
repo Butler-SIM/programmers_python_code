@@ -8,9 +8,23 @@
 # 입출력 예
 # n	        return
 # 118372	873211
+from main import print_hi
+
 
 def solution(n):
-    answer = 0
+    replace_n = str(n)
+    arr =  list()
+    for i in range(len(replace_n)):
+        print(replace_n[i])
+        arr.append(replace_n[i])
+
+    arr.sort(reverse=True)
+    print(arr)
+    answer = ""
+
+    for i in arr:
+        print("asdf")
+
     return answer
 
 
