@@ -14,11 +14,22 @@
 # "z"	1	"a"
 # "a B z"	4	"e F d"
 
-def solution(s):
-    print(s)
-    return int(s)
+def solution(s, n):
+
+    list = []
+    ord_s = ""
+    for i in range(len(s)) :
+        if s[i] != "" :
+            ord_s = ord(s[i]) + n
+            print(ord_s)
+
+            list.append(chr(ord_s))
+    print(list)
+    result = "".join(list)
+    print(result)
+    return result
 
 
 # Press the green button in the gutter to run the script.
 if __name__ == '__main__':
-    solution("-626331")
+    solution("a",1)
