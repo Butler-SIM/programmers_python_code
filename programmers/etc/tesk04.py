@@ -1,6 +1,6 @@
 from string import ascii_uppercase
 
-
+#구름 오늘의 업무
 def solution():
 
     user_input = input()
