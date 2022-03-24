@@ -2,7 +2,12 @@ from string import ascii_uppercase
 
 #구름 오늘의 업무
 def solution():
+    #5 3
+    #BA
+    #DA
+    #BD
 
+    #result BDCAE
     user_input = input()
     input_split = user_input.split(" ",2)
     result = ''
