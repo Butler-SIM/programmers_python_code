@@ -12,10 +12,9 @@ def solution():
         #100 100 200 200
         if arr[i-1] == arr[i] :
             for j in range(1,len(arr)):
-                if arr[i-1] != arr[j]:
-                    if arr[i-1] < arr[j] :
-                        count += 1
-                        break
+                if arr[i-1] < arr[j] :
+                    count += 1
+                    break
         elif arr[i-1] != arr[i]:
 
             count += 1
