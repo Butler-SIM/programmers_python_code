@@ -23,13 +23,13 @@ brown	yellow	return
 
 def solution(brown, yellow):
     answer = []
-    num = brown + yellow
+    num = (brown + yellow) // 2
 
-    for i in range(num):
-        for j in range(num):
-            if j * i == num and j <= i:
+    for i in range(10000):
+        for j in range(10000):
+            if 2 * (i + j - 2) == brown and (i - 2) * (j - 2) == yellow and (j>=i) :
                 print("i, j", i , j)
-                answer = [i, j]
+                answer = [j, i]
                 break
         if answer:
             break
@@ -41,4 +41,4 @@ def solution(brown, yellow):
 
 # Press the green button in the gutter to run the script.
 if __name__ == '__main__':
-    solution(10,2)
+    solution(8,1)
